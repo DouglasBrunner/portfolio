@@ -1,0 +1,82 @@
+@red: #8b1315;
+@orange: #FD971F;
+@green: #A6E22E;
+@blue: #4a9cab;
+@purple: #6d529e;
+@lightgray: #F8F8F2;
+
+@dark1: #2d3144;
+
+@dark1text: #efefde;
+
+@font-face {
+    font-family: "nameFont";
+    src: url("../fonts/RedRose-Bold.ttf");
+}
+
+html, body {
+    background-image: url('/img/dark-wood.png');
+}
+
+body {
+    padding-bottom: 2em;
+}
+
+a {
+    color: @blue;
+}
+
+h1 {
+    margin: 0.5em 0 0.5em 0;
+    color: #fff !important;
+    font-family: "nameFont";
+    font-size: 5em;
+}
+
+h2 {
+    color: @red !important;
+}
+
+h3 {
+    color: @purple !important;
+}
+
+div#online-presence {
+    padding: 0.5em 0 0.8em 0;
+}
+
+    div#online-presence a {
+        padding: 0 0.5em 0 0.5em;
+    }
+
+div#bio {
+    padding: 4em 0 3em 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    ul li {
+        margin: 0.7em 0 0 0;
+    }
+
+@media only screen and (min-width: 639px) {
+    h3 {
+        min-height: 3em;
+    }
+    ul li {
+        min-height: 8em;
+    }
+}
+
+@media only screen and (min-width: 685px) {
+    h3 {
+        min-height: auto;
+    }
+    ul li {
+        min-height: 7em;
+    }
+}
