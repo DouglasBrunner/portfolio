@@ -13,6 +13,6 @@ FROM amazoncorretto:11
 
 RUN mkdir /app
 COPY --from=build /build/target/portfolio.jar /app/portfolio.jar
-RUN chmod -R 777 /app
+RUN chmod -R 755 /app
 
 ENTRYPOINT ["java","-jar","/app/portfolio.jar"]
