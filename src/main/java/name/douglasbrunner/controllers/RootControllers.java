@@ -13,11 +13,8 @@ import java.util.HashMap;
 public class RootControllers {
 
     @RequestMapping(value="", method= RequestMethod.GET)
-    public ModelAndView landing(Principal principal) {
-        System.out.println("the landing was hit");
-        return new ModelAndView("landing", new HashMap<String, Object>() {{
-            put("principal", principal);
-        }});
+    public ModelAndView landing() {
+        return new ModelAndView("index");
     }
 
 }
