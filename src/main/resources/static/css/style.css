@@ -1,6 +1,23 @@
+/* General styles for all resolutions */
 html,
 body {
   min-height: 100%;
+  font-size: 16pt;
+}
+html {
+  background-image: url("../img/bg_whole.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+div.container {
+  padding-bottom: 1.5em;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+div#landscape-container {
+  min-height: calc(100vh - 1.5em);
+  display: none;
 }
 h1 {
   color: #fff !important;
@@ -9,7 +26,6 @@ h1 {
 h2 {
   color: #fff !important;
   text-shadow: 2px 2px #000;
-  padding-bottom: 3em;
 }
 p {
   color: #fff;
@@ -17,25 +33,13 @@ p {
 div.social a {
   color: #fff;
 }
-div.social a:hover {
-  color: #ff0000;
-}
-div#medium-container {
-  display: none;
-}
-div.container {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("../img/bg_whole.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  text-align: center;
+div.social a:hover svg {
+  fill: red;
 }
 div.container div.first {
   background-image: url("../img/bg_final.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  border-radius: 0% 100% 22% 78% / 30% 0% 100% 70%;
   border: 1px solid #000;
   box-shadow: 1px -2px 7px -1px rgba(0, 0, 0, 0.85) inset;
   -webkit-box-shadow: 1px -2px 7px -1px rgba(0, 0, 0, 0.85) inset;
@@ -47,99 +51,117 @@ div.container div.first div {
   background-position: top center;
   background-size: 60vh;
   background-repeat: no-repeat;
-  border-radius: 0% 100% 22% 78% / 30% 0% 100% 70%;
 }
 div.container div.second {
-  padding: 0 2em 2em 2em;
   background: #3E5B90;
-  border-radius: 0% 100% 71% 29% / 76% 0% 100% 24%;
   border: 1px solid #000;
   display: inline-block;
 }
 div.container div.third {
-  padding: 0 2em 2em 2em;
   background: #0B0E2A;
+  display: inline-flex;
+}
+div.traits h2 {
+  margin: 0;
+}
+div.role p {
+  margin: 0;
+}
+/* Portrait styling from min width up to 768px wide, and min-height up to 812px height */
+div#portrait-container div.first {
+  height: 40vh;
+  border-radius: 0% 100% 22% 78% / 30% 0% 100% 70%;
+}
+div#portrait-container div.first div {
+  height: 40vh;
+  width: 70vw;
+  border-radius: 0% 100% 22% 78% / 30% 0% 100% 70%;
+}
+div#portrait-container div.second {
+  padding: 0 1em 1em 1em;
+  border-radius: 0% 100% 71% 29% / 76% 0% 100% 24%;
+}
+div#portrait-container div.third {
+  padding: 0 1em 1em 1em;
   border-radius: 100% 0% 90% 10% / 0% 55% 45% 100%;
   box-shadow: 0px 3px 5px 0px rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: 0px 3px 5px 0px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 0px 3px 5px 0px rgba(255, 255, 255, 0.75);
-  display: inline-flex;
-}
-div#portrait-container div.first {
-  height: 40vh;
-  width: 80vw;
-}
-div#portrait-container div.first div {
-  height: 40vh;
-  width: 80vw;
-}
-div#portrait-container h1 {
-  margin-bottom: 0.5em;
-  font-size: 4em;
-}
-div#portrait-container h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 2em;
-}
-div#portrait-container p {
-  margin: 0;
-}
-div#portrait-container div.social {
-  margin-bottom: 1.5em;
 }
 div#portrait-container div.traits {
-  margin-bottom: 3em;
+  margin-top: 1em;
 }
 div#portrait-container div.role {
-  font-size: 1.5em;
-}
-div#landscape-container div.uk-card {
-  padding: 0 1em 0 1em;
-}
-div#landscape-container h1 {
-  font-size: 5em;
-}
-div#landscape-container h2 {
-  padding: 0;
-  margin: 0;
-  font-size: 2.5em;
-}
-div#landscape-container div.traits {
-  padding: 1em 0 3em 0;
-}
-div#landscape-container p {
-  margin: 0;
-  font-size: 1.5em;
-}
-div#landscape-container div.first {
   margin-top: 1.5em;
 }
-div#landscape-container div.first,
-div#landscape-container div.first div {
-  height: 40vh;
-  width: 30vw;
-  border-radius: 41% 38% 27% 75% / 0% 37% 32% 32%;
+h1 {
+  margin-top: 1em;
+  font-size: 2em;
 }
-div#landscape-container div.first div {
-  background-position: bottom -20px right calc(100% * 0.25);
+div.social {
+  margin-top: 1.25em;
 }
-div#landscape-container div.second {
-  margin-top: 1.5em;
-  border-radius: 94% 6% 90% 10% / 33% 55% 45% 67%;
+div.social a {
+  margin: 0 0.5em 0 0.5em;
 }
-div#landscape-container div.third {
-  display: inline-flex;
-  border-radius: 28% 72% 47% 53% / 85% 55% 45% 15%;
+div.social a svg {
+  height: 2em;
+  width: 2em;
 }
-@media screen and (min-width: 1200px) {
+div.traits {
+  margin-top: 1.25em;
+}
+div.traits h2 {
+  font-size: 1.25em;
+}
+div.role {
+  padding-top: 2em;
+}
+div.role p {
+  font-size: 0.8em;
+}
+/* Portrait styling from 768px wide by 1024px heigh */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+  div#portrait-container div.social {
+    margin-top: 2.5em;
+  }
+  div#portrait-container div.social svg {
+    height: 2.5em;
+    width: 2.5em;
+  }
+  div#portrait-container div.traits {
+    font-size: 1.75em;
+  }
+  div#portrait-container div.role {
+    font-size: 1.5em;
+  }
+}
+/* Landscape styling from 1024px wide and beyond */
+@media screen and (min-width: 1024px) {
   div#portrait-container {
     display: none;
   }
   div#landscape-container {
     display: flex;
   }
+  div#landscape-container div.first {
+    width: 50vh;
+    height: 50vh;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
   div#landscape-container div.first div {
-    background-position: top center;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  div#landscape-container div.second {
+    padding: 1em;
+    border-radius: 54% 46% 83% 17% / 53% 81% 19% 47%;
+  }
+  div#landscape-container div.third {
+    border-radius: 22% 53% 26% 69% / 29% 37% 50% 27%;
   }
 }
